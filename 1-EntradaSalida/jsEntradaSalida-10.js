@@ -7,9 +7,7 @@ function MostrarAumento()
     var porcentaje
     var resultado2;
     var resultado1;
-    var sueldo;
-    sueldo = document.getElementById("importe").value;
-    sueldo = parseInt(sueldo);
+    var sueldo= parseInt(document.getElementById("importe").value);
     resultado1=(sueldo*25);
     resultado2=(resultado1/100);
     porcentaje=(sueldo-resultado2)

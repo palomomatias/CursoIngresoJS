@@ -13,8 +13,6 @@ function SacarResto()
     divisor = document.getElementById("numeroDivisor").value;
     dividendo = parseInt (dividendo);
     divisor = parseInt (divisor);
-    resultado1= (dividendo/divisor);
-    resultado2= (resultado1*divisor);
-    resto = (dividendo-resultado2);
+    resto = (dividendo%divisor);
     alert ("el resto  "+resto);
 }

@@ -2,11 +2,21 @@ function Mostrar()
 {
 //tomo la edad  
 var mesDelAño = document.getElementById('mes').value;
-
-//alert (mesDelAño);
-	
-	
-
-
+    switch(mesDelAño)
+    {
+    case"Febrero":
+    alert("este mes no tiene mas de 29 dias");
+    break;
+    case"Enero":
+    case"Marzo":
+    case"Mayo":
+    case"Julio":
+    case"Octubre":
+    case"Diciembre":
+        alert("este mes tiene 31 dias");
+        break;
+    default:alert("este mes tiene 30 ");
+    break;
+    }
 
 }//FIN DE LA FUNCIÓN

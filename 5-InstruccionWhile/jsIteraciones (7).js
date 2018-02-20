@@ -1,7 +1,7 @@
 function Mostrar()
 {
 	var numero
-	var contador=0;
+	var contador=1;
 	var acumulador=0;
 	var respuesta
 	while(respuesta!=false)

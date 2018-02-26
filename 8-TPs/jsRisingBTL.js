@@ -15,7 +15,8 @@ function ComenzarIngreso ()
     var EstadoCivil
     var sueldo
     var legajo
-    for(var i=1;i<=7;i++)
+    var sueldoMaxNacionalizados=1
+    for(var i=1;i<=2;i++)
     {
  //pido edad
     edad=prompt("Ingrese su edad");
@@ -119,8 +120,19 @@ function ComenzarIngreso ()
         else if (nacionalidad=="n")
         {
             nacionalidad="nacionalizado"
-            documen.getElementById("Nacionalidad").value=nacionalidad
+            document.getElementById("Nacionalidad").value=nacionalidad
+        }
+     //calculo el sueldoMaxNacionalizados
+        if(nacionalidad=="nacionalizado"&&sueldo>sueldoMaxNacionalizados)
+        {
+            sueldoMaxNacionalizados=sueldo
+            console.log(sueldoMaxNacionalizados)
         }
 
-    }
+
+}/*final de for*/
+    
+    
+    alert(+sueldoMaxNacionalizados)
+
 }

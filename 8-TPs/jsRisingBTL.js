@@ -9,5 +9,118 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    var edad
+    var sexo
+    var nacionalidad
+    var EstadoCivil
+    var sueldo
+    var legajo
+    for(var i=1;i<=7;i++)
+    {
+ //pido edad
+    edad=prompt("Ingrese su edad");
+    edad=parseInt(edad);
+    while(isNaN(edad)|| edad<18||edad>90)
+    {
+        edad=prompt("ingrese su edad")
+        edad=parseInt(edad)
+    }   
+    document.getElementById("Edad").value=edad
+ //pido sexo
+    sexo=prompt("ingrese F o M")
+    while(sexo!="f"&&sexo!="m")
+    {
+        alert("error ingrsese F o M")
+        sexo=prompt("Infrese F o M")
+        if(sexo==null)
+        {
+            sexo=prompt("ingrese f o m")
+            ;break
+        }
+        }
+     if(sexo=="f")
+        {
+            sexo="femenino"
+            document.getElementById("Sexo").value=sexo
+        }
+        else if (sexo=="m")
+        {
+            sexo="masculino"
+            document.getElementById("Sexo").value=sexo
+        }
+    //pido estado civil
+        estadocivil=prompt("1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos")
+        estadocivil=parseInt(estadocivil)
+        while(isNaN(estadocivil)||estadocivil<1||estadocivil>9)
+        {
+            estadocivil=prompt("1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos")
+            estadocivil=parseInt(estadocivil)
+        }
+        if(estadocivil==1)
+        {
+            estadocivil="soltero"
+            document.getElementById("EstadoCivil").value=estadocivil
+        }
+        else if(estadocivil==2)
+        {
+            estadocivil="casado"
+            document.getElementById("EstadoCivil").value=estadocivil
+        }
+        else if(estadocivil==3)
+        {
+            estadocivil="divorciado"
+            document.getElementById("EstadoCivil").value=estadocivil
+        }
+        else if(estadocivil==4)
+        {
+            estadocivil="viudo"
+            document.getElementById("EstadoCivil").value=estadocivil
+        }
+    //pido sueldo
+        sueldo=prompt("ingrese su sueldo no menor a 8000")
+        sueldo=parseInt(sueldo)
+         while(isNaN(sueldo)|| sueldo<8000)
+         {
+             sueldo=prompt("ingrese su sueldo no menor a 8000")
+             sueldo=parseInt(sueldo)
+         }
+         document.getElementById("Sueldo").value=sueldo
+   //pidop legajo    
+         legajo=prompt("Ingrese su numero de legajo");
+         legajo=parseInt(legajo);
+            while(isNaN(legajo)|| legajo>9999||legajo<1000)
+            {
+              legajo=prompt("Ingrese correctamente su numero de legajo");
+              legajo=parseInt(legajo)
+                }
+            document.getElementById("Legajo").value=legajo
+    //pido nacionalidad
+        nacionalidad=prompt("ingrese a para Argentinos, e para extranjeros o n para nacionalidad")
+            while(nacionalidad!="a"&&nacionalidad!="e"&&nacionalidad!="n")
+        {
+            alert("error ingrsese a para Argentinos, e para extranjeros o n para nacionalidad")
+            nacionalidad=prompt("ingrese a para Argentinos, e para extranjeros o n para nacionalidad")
+            if(nacionalidad==null)
+        {
+            nacionalidad=prompt("ingrese a para Argentinos, e para extranjeros o n para nacionalidad")
+            ;break
+        }
+        }
+        if(nacionalidad=="a")
+        {
+            nacionalidad="Argentino"
+            document.getElementById("Nacionalidad").value=nacionalidad
+        }
+        else if (nacionalidad=="e")
+        {
+            nacionalidad="extranjero"
+            document.getElementById("Nacionalidad").value=nacionalidad
+        }
+        else if (nacionalidad=="n")
+        {
+            nacionalidad="nacionalizado"
+            documen.getElementById("Nacionalidad").value=nacionalidad
+        }
+
+    }
 }

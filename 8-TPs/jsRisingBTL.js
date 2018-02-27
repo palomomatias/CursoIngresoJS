@@ -15,8 +15,17 @@ function ComenzarIngreso ()
     var EstadoCivil
     var sueldo
     var legajo
-    var sueldoMaxNacionalizados=1
-    for(var i=1;i<=2;i++)
+    var sueldoMaxNacionalizados=0
+    var sueldoMaxFemeninoArgentinos=0
+    var sumarF=0
+    var sumarM=0
+    var sueldoPromedioMasculino
+    var sueldoPromedioFemenino
+    var sueldoPromedioTotalFyM
+    var contadorM=1
+    var contadorF=1
+    //hago el for
+    for(var i=1;i<=4;i++)
     {
  //pido edad
     edad=prompt("Ingrese su edad");
@@ -128,11 +137,38 @@ function ComenzarIngreso ()
             sueldoMaxNacionalizados=sueldo
             console.log(sueldoMaxNacionalizados)
         }
-
-
-}/*final de for*/
+        //calculo sueldo max femenino y nacionalidad Argentino
+        if(sexo=="femenino"&&nacionalidad=="Argentino" )
+         {
+             sueldoMaxFemeninoArgentinos=sueldo
+             if(sueldo>sueldoMaxFemeninoArgentinos)
+             {
+                 sueldoMaxFemeninoArgentinos=sueldo
+             }
+         }
+// calculo sueldo promedio de masculino femenino y los 2 juntos
+         if(sexo=="femenino")
+         {
+            sumarF=sueldo + sumarF
+            contadorF++
+         }
+         
+         
+         else if (sexo=="masculino")
+        {
+             sumarM=sueldo + sumarM
+             contadorM++
+            
+        }
+        sueldoPromedioFemenino=sumarF/i
+        sueldoPromedioMasculino=sumarM/i
+        sueldoPromedioTotalFyM=(sumarF+sumarM)/(i)
+}
+/*final de for*/
     
-    
-    alert(+sueldoMaxNacionalizados)
+
+    alert("El sueldo maximo de nacionalizado es " +(sueldoMaxNacionalizados))
+    alert("El sueldo maximo femenino argentinos es " +(sueldoMaxFemeninoArgentinos))
+    alert("Sueldo promedio femenino es "+(sueldoPromedioFemenino)+" sueldo promedio masculino es "+(sueldoPromedioMasculino)+" Sueldo promedio total es "+(sueldoPromedioTotalFyM))
 
 }

@@ -10,7 +10,7 @@ function Mostrar()
 	mostrar=parseInt(mostrar)
 	mostrar2=prompt("ingrese otro numero")
 	mostrar2=parseInt(mostrar2)
-	if(mostrar=mostrar2)
+	if(mostrar==mostrar2)
 	{
 		multiplicacion=mostrar*mostrar2
 		document.write(multiplicacion)

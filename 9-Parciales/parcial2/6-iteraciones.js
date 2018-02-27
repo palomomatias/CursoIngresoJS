@@ -39,4 +39,4 @@ function Mostrar()
 	alert("el mayor vendido fue"+(max)+"y el menor vendido es"+(min))
 	
 
-}
+} 

@@ -22,8 +22,8 @@ function ComenzarIngreso ()
     var sueldoPromedioMasculino
     var sueldoPromedioFemenino
     var sueldoPromedioTotalFyM
-    var contadorM=1
-    var contadorF=1
+    var contadorM=0
+    var contadorF=0
     //hago el for
     for(var i=1;i<=4;i++)
     {
@@ -149,19 +149,19 @@ function ComenzarIngreso ()
 // calculo sueldo promedio de masculino femenino y los 2 juntos
          if(sexo=="femenino")
          {
-            sumarF=sueldo + sumarF
+            sumarF=sumarF + sueldo
             contadorF++
          }
          
          
          else if (sexo=="masculino")
         {
-             sumarM=sueldo + sumarM
+             sumarM=sumarM + sueldo
              contadorM++
             
         }
-        sueldoPromedioFemenino=sumarF/i
-        sueldoPromedioMasculino=sumarM/i
+        sueldoPromedioFemenino=sumarF/contadorF
+        sueldoPromedioMasculino=sumarM/contadorM
         sueldoPromedioTotalFyM=(sumarF+sumarM)/(i)
 }
 /*final de for*/

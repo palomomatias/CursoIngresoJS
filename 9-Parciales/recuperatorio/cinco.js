@@ -1,16 +1,17 @@
 function Mostrar()
 {
-var mes;
-	mes=prompt("pone un mes","");
-	switch(mes)
-	{
-		case"Diciembre":
-		alert("se vienen las fiestas");
+var mes
+mes=prompt("ingrese un mes")
+switch (mes) {
+		case "diciembre":
+		alert("seviene las fiestas")
 		break;
-		case"Enero":
-        alert("comienza el año");
-        break;
-        default:alert("no es enero ni diciembre");
-	}
-    
+		case "enero":
+		alert("comienza el año")
+		break;
+		default:
+		alert("no es enero ni diciembre")
+		break;
+}
+
 }

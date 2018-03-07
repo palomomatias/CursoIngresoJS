@@ -1,11 +1,10 @@
 
 function Mostrar()
 {
-    var area
-    var base
-    base= document.getElementById("laBase").value;
-    base = parseInt(base)
-    area=(base*base)
-    alert (area)
-
+   var base
+   var superficie
+   base=document.getElementById("laBase").value
+    base=parseInt(base)
+    superficie=base*base
+    alert(superficie)
 }

@@ -1,11 +1,11 @@
 function Mostrar()
 {
-    var resultado2
-    var resultado1;
-    var sueldo 
-    sueldo= prompt("","")
-    sueldo=parseInt(sueldo)
-    resultado1=((sueldo*25)/100);
-    resultado2=(sueldo-resultado1)
-    document.getElementById("importeFinal").value= resultado2;
+var importe
+var total
+var totalfinal
+importe=prompt("ingrese su importe")
+importe=parseInt(importe)
+total=((importe*25)/100)
+totalfinal=importe-total
+document.getElementById("importeFinal").value=totalfinal
 }
